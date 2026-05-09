@@ -1,4 +1,4 @@
-import { Button, Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenu, NavbarMenuItem, Link } from "@heroui/react";
+import { Button, Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenu, NavbarMenuItem, Link, Divider } from "@heroui/react";
 import { useState } from "react";
 
 export default function Hero() {
@@ -7,8 +7,8 @@ export default function Hero() {
   const menuItems = ["Главная", "Проекты", "Блог", "Контакты"];
 
   return (
-    <div className="relative isolate min-h-screen">
-      <Navbar onMenuOpenChange={setIsMenuOpen} isMenuOpen={isMenuOpen} className="fixed top-0">
+    <div className="min-h-screen">
+      <Navbar onMenuOpenChange={setIsMenuOpen} isMenuOpen={isMenuOpen} maxWidth="xl">
         <NavbarContent>
           <NavbarMenuToggle className="sm:hidden" />
           <NavbarBrand>
@@ -45,24 +45,38 @@ export default function Hero() {
         </NavbarMenu>
       </Navbar>
 
-      <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
-        <div className="text-center">
-          <h1 className="text-5xl font-semibold tracking-tight text-balance text-gray-900 sm:text-7xl">
+      <main className="mx-auto max-w-2xl px-6">
+        <section className="flex flex-col items-center justify-center text-center py-32 sm:py-48 lg:py-56">
+          <div className="rounded-xl border border-default-200 bg-default-50 px-4 py-1.5 text-sm text-default-600 mb-8">
+            Новый проект запущен
+          </div>
+
+          <h1 className="text-4xl font-bold tracking-tight text-default-900 sm:text-6xl">
             qwertifyed
           </h1>
-          <p className="mt-8 text-lg font-medium text-pretty text-gray-500 sm:text-xl/8">
+
+          <p className="mt-6 text-lg text-default-500 max-w-lg">
             Разработка, творчество и open-source. Делаем веб лучше.
           </p>
-          <div className="mt-10 flex items-center justify-center gap-x-6">
+
+          <Divider className="my-8 max-w-xs" />
+
+          <div className="flex items-center gap-4">
             <Button color="primary" size="lg">
               Начать
             </Button>
-            <Button variant="light" size="lg">
+            <Button variant="bordered" size="lg">
               Подробнее
             </Button>
           </div>
+        </section>
+      </main>
+
+      <footer className="border-t border-default-100">
+        <div className="mx-auto max-w-2xl px-6 py-8 text-center text-sm text-default-400">
+          &copy; {new Date().getFullYear()} qwertifyed
         </div>
-      </div>
+      </footer>
     </div>
   );
 }
