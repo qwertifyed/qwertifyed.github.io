@@ -49,7 +49,7 @@ export default function SettingsModal({ isOpen, onOpenChange, currentTheme, onTh
                       <div className={`h-2 w-8 rounded ${isDark ? "bg-neutral-700" : "bg-neutral-200"} ml-auto`} />
                     </div>
                     <div className="flex gap-2 mb-2">
-                      <div className="h-4 w-full rounded bg-indigo-500" />
+                      <div className={`h-4 w-full rounded ${t.accent}`} />
                     </div>
                     <div className="flex gap-2">
                       <div className={`h-2 w-12 rounded ${isDark ? "bg-neutral-600" : "bg-neutral-300"}`} />

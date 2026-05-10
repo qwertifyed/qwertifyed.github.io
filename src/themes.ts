@@ -2,13 +2,14 @@ export interface Theme {
   id: string;
   label: string;
   group: "light" | "dark";
+  accent: string;
 }
 
 export const themes: Theme[] = [
-  { id: "svetlana", label: "Светлана", group: "light" },
-  { id: "sun-monaco", label: "Солнце Монако", group: "light" },
-  { id: "darkula", label: "Даркула", group: "dark" },
-  { id: "screaming-chicken", label: "Орущая курица на дереве", group: "dark" },
+  { id: "svetlana", label: "Светлана", group: "light", accent: "bg-indigo-500" },
+  { id: "sun-monaco", label: "Солнце Монако", group: "light", accent: "bg-amber-500" },
+  { id: "darkula", label: "Даркула", group: "dark", accent: "bg-violet-500" },
+  { id: "screaming-chicken", label: "Орущая курица на дереве", group: "dark", accent: "bg-orange-500" },
 ];
 
 export function applyTheme(themeId: string) {
