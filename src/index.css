@@ -2,3 +2,38 @@
 @plugin "./hero.ts";
 @source "../node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}";
 @custom-variant dark (&:is(.dark *));
+
+.theme-sun-monaco {
+  --heroui-background: 48 100% 98%;
+  --heroui-default-50: 48 100% 96%;
+  --heroui-default-100: 45 100% 90%;
+  --heroui-default-200: 42 85% 80%;
+  --heroui-default-300: 40 70% 70%;
+  --heroui-default-400: 38 55% 60%;
+  --heroui-default-500: 36 45% 50%;
+  --heroui-default-600: 34 50% 40%;
+  --heroui-default-700: 32 55% 30%;
+  --heroui-default-800: 30 60% 20%;
+  --heroui-default-900: 28 65% 12%;
+  --heroui-foreground: 28 65% 12%;
+  --heroui-primary: 38 95% 50%;
+  --heroui-primary-foreground: 0 0% 100%;
+}
+
+.theme-screaming-chicken {
+  --heroui-background: 15 50% 8%;
+  --heroui-content2: 15 40% 14%;
+  --heroui-default-50: 15 30% 14%;
+  --heroui-default-100: 15 30% 18%;
+  --heroui-default-200: 20 30% 24%;
+  --heroui-default-300: 20 25% 32%;
+  --heroui-default-400: 20 20% 44%;
+  --heroui-default-500: 20 18% 56%;
+  --heroui-default-600: 20 22% 68%;
+  --heroui-default-700: 20 26% 78%;
+  --heroui-default-800: 20 30% 88%;
+  --heroui-default-900: 20 34% 95%;
+  --heroui-foreground: 25 100% 96%;
+  --heroui-primary: 18 100% 55%;
+  --heroui-primary-foreground: 0 0% 100%;
+}
