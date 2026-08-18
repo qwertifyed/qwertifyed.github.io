@@ -58,20 +58,10 @@ const config = {
     [
       '@docusaurus/plugin-content-docs',
       {
-        id: 'guard',
-        path: 'systems/guard/docs',
-        routeBasePath: 'guard',
-        sidebarPath: './systems/guard/sidebars.js',
-        editUrl: 'https://github.com/qwertifyed/qwertifyed.github.io/tree/main/',
-      },
-    ],
-    [
-      '@docusaurus/plugin-content-docs',
-      {
-        id: 'economy',
-        path: 'systems/economy/docs',
-        routeBasePath: 'economy',
-        sidebarPath: './systems/economy/sidebars.js',
+        id: 'zen-player',
+        path: 'systems/zen.player/docs',
+        routeBasePath: 'zen-player',
+        sidebarPath: './systems/zen.player/sidebars.js',
         editUrl: 'https://github.com/qwertifyed/qwertifyed.github.io/tree/main/',
       },
     ],
@@ -84,10 +74,10 @@ const config = {
         respectPrefersColorScheme: true,
       },
       navbar: {
-        title: 'qwertifyed Docs',
         logo: {
-          alt: 'qwertifyed Docs Logo',
-          src: 'img/logo.svg',
+          alt: 'qwertifyed',
+          src: 'img/qwertifyed-light.svg',
+          srcDark: 'img/qwertifyed-dark.svg',
         },
         items: [
           {to: '/', label: 'Главная', position: 'left'},
@@ -98,15 +88,9 @@ const config = {
             items: [
               {
                 type: 'docSidebar',
-                sidebarId: 'guardSidebar',
-                docsPluginId: 'guard',
-                label: 'Guard',
-              },
-              {
-                type: 'docSidebar',
-                sidebarId: 'economySidebar',
-                docsPluginId: 'economy',
-                label: 'Economy',
+                sidebarId: 'zenPlayerSidebar',
+                docsPluginId: 'zen-player',
+                label: 'zen.player',
               },
             ],
           },
@@ -124,12 +108,8 @@ const config = {
             title: 'Системы',
             items: [
               {
-                label: 'Guard',
-                to: '/guard/',
-              },
-              {
-                label: 'Economy',
-                to: '/economy/',
+                label: 'zen.player',
+                to: '/zen-player/',
               },
             ],
           },
